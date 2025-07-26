@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "569dcf51-0382-46f8-a8e9-c62afc194069",
+		"name": "Saraha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39387372"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"user1\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\":\"user1@1234\",\r\n    \"cPassword\":\"user1@1234\",\r\n    \"phone\":\"01234567890\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sigIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"uaer1@gmail.com\",\r\n    \"password\":\"user1@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkbWVkb28xMjkzQGdtYWlsLmNvbSIsImlkIjoiNjg4NTVhNjkzYWMxM2QzZTIyYmI2YmZhIiwiaWF0IjoxNzUzNTY5OTM5LCJleHAiOjE3NTQxNzQ3Mzl9.0haIN_WaMV9Iyu5jCAPso5cBelipJYRzilN2VWHYuIE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkbWVkb28xMjkzQGdtYWlsLmNvbSIsImlkIjoiNjg4NTVhNjkzYWMxM2QzZTIyYmI2YmZhIiwiaWF0IjoxNzUzNTY5OTM5LCJleHAiOjE3NTQxNzQ3Mzl9.0haIN_WaMV9Iyu5jCAPso5cBelipJYRzilN2VWHYuIE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"user2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkbWVkb28xMjkzQGdtYWlsLmNvbSIsImlkIjoiNjg4NTVhNjkzYWMxM2QzZTIyYmI2YmZhIiwiaWF0IjoxNzUzNTY5OTM5LCJleHAiOjE3NTQxNzQ3Mzl9.0haIN_WaMV9Iyu5jCAPso5cBelipJYRzilN2VWHYuIE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"user1@1234\",\r\n    \"newPassword\":\"user2@12345\",\r\n    \"cPassword\":\"user2@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "freezeAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkbWVkb28xMjkzQGdtYWlsLmNvbSIsImlkIjoiNjg4NTVhNjkzYWMxM2QzZTIyYmI2YmZhIiwiaWF0IjoxNzUzNTcwMjc4LCJleHAiOjE3NTQxNzUwNzh9.hG36UGrYq05FlCyZSUF-pHVgPv3Ks1tKK_koLAhlED4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/freezeAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"freezeAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unFreezeAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/unFreezeAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"unFreezeAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shareProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/profile/68855a693ac13d3e22bb6bfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"profile",
+								"68855a693ac13d3e22bb6bfa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "sendMessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/sendMessage/68855a693ac13d3e22bb6bfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"sendMessage",
+								"68855a693ac13d3e22bb6bfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkbWVkb28xMjkzQGdtYWlsLmNvbSIsImlkIjoiNjg4NTVhNjkzYWMxM2QzZTIyYmI2YmZhIiwiaWF0IjoxNzUzNTcwNTU1LCJleHAiOjE3NTQxNzUzNTV9.KdOt7YudHnuLhwh5b2zCr62r4WEqbqyv8T_ezapEe6Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/getMessages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"getMessages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
